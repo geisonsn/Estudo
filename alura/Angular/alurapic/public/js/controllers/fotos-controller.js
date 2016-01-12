@@ -1,6 +1,36 @@
-angular.module("alurapic").controller("FotosController", function($scope) {
-	$scope.foto = {
-		titulo : "Leão",
-		url : "http://www.fundosanimais.com/Minis/leoes.jpg"
-	};
+angular.module("alurapic").controller("FotosController", function($scope, $http) {
+
+	$http.get("v1/fotos")
+	.success(function(fotos) {
+		$scope.fotos = fotos;	
+	})
+	.error(function(erro) {
+		console.log(erro);
+	});
+
+	/*
+	var promise = $http.get("v1/fotos");
+	promise.then(function(retorno) {
+		$scope.fotos = retorno.data;	
+	}).catch(function(erro) {
+		console.log(error);
+	});
+	*/
+
+	/*
+	$scope.fotos = [
+		{
+			titulo : "Leão 1",
+			url : "http://www.fundosanimais.com/Minis/leoes.jpg"
+		},
+		{
+			titulo : "Leão 2",
+			url : "http://www.fundosanimais.com/Minis/leoes.jpg"
+		},
+		{
+			titulo : "Leão 3",
+			url : "http://www.fundosanimais.com/Minis/leoes.jpg"
+		}
+	];
+	*/
 });

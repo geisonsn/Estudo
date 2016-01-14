@@ -14,15 +14,15 @@ angular.module("alurapic").controller("FotosController", function($scope, $http)
 
 	$scope.remover = function(foto) {
 		$http.delete("v1/fotos/" + foto._id)
-		.success(function() {
-			$scope.mensagem = "Foto " + foto.titulo + " foi removida com sucesso";
-			var indiceFoto = $scope.fotos.indexOf(foto);
-			$scope.fotos.splice(indiceFoto, 1);
-		})
-		.error(function(erro) {
-			console.log(erro);
-			$scope.mensagem = "Não foi possível remover a foto " + foto.titulo;
-		});
+			.success(function() {
+				$scope.mensagem = "Foto " + foto.titulo + " foi removida com sucesso";
+				var indiceFoto = $scope.fotos.indexOf(foto);
+				$scope.fotos.splice(indiceFoto, 1);
+			})
+			.error(function(erro) {
+				console.log(erro);
+				$scope.mensagem = "Não foi possível remover a foto " + foto.titulo;
+			});
 	}
 
 	/*

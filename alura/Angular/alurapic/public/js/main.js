@@ -1,5 +1,5 @@
 angular.module("alurapic", ["minhasDiretivas", "ngAnimate", "ngRoute", "meusServicos"])
-.config(function($routeProvider, $locationProvider) {
+.config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
 
 	$locationProvider.html5Mode(true);
 
@@ -22,4 +22,4 @@ angular.module("alurapic", ["minhasDiretivas", "ngAnimate", "ngRoute", "meusServ
 		redirectTo : "/fotos"
 	});
 
-});
+}]);

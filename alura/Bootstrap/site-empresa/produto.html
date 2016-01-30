@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Loja virtual</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />	
+	<link rel="stylesheet" href="css/animate.css">
+	<meta name="viewport" content="width=device-width"/>
+	<style>
+		.navbar-header button {
+			color: #fff;
+		}
+		.fullscreen {
+			width: 100%
+		}
+		main {
+			padding-top: 50px;
+		}
+		footer {
+			background: #333;
+			color: #fff;
+			text-align: center;
+			padding: 20px 0;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-fixed-top navbar-inverse">
+			<div class="navbar-header">
+				<a href="#home" class="navbar-brand">Caelum</a>
+				<button type="button" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">Menu</button>				
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#novidades">Novidades</a></li>
+					<li><a href="#maisVendidos">Mais vendidos</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Camisetas
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Masculino</a></li>
+							<li><a href="#">Feminina</a></li>
+							<li><a href="#">Infantil</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Digite o que você procura">
+					</div>
+					<input type="submit" value="Buscar" class="btn btn-default">
+				</form>				
+			</div>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<img src="img/produto.png" class="img-responsive img-thumbnail">
+				<div class="text-center">
+					<h1>Camiseta azul importada</h1>
+					<h3>R$ 129,00</h3>
+					<a ref="#" class="btn btn-primary btn-lg">Comprar</a>					
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		Avenida Paulista n 1<br/>
+		(11) 2596-1234
+	</footer>
+
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+
+</body>
+</html>

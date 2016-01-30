@@ -62,11 +62,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
-					<div class="painel painel-default">
-						<div class="painel-heading">
-							<h2 class="painel-title">Sua compra</h2>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2 class="panel-title">Sua compra</h2>
 						</div>
-						<div class="painel-body">
+						<div class="panel-body">
 							<img src="img/produto.png" class="img-responsive img-thumbnail">
 							<dl>
 								<dt>Nome</dt>
@@ -85,7 +85,35 @@
 					</div>
 				</div>
 				<div class="col-sm-8">
-								
+					<fieldset>
+						<legend>Informações do usuário</legend>
+						<form>
+							<div class="form-group">
+								<label for="nome">Nome completo:</label>
+								<input id="nome" type="text" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<div class="input-group">
+									<span class="input-group-addon">@</span>
+									<input id="email" type="email" class="form-control">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="cpf">Cpf:</label>
+								<input idd="cpf" type="text" class="form-control">
+							</div>
+
+							<div class="checkbox">
+								<label for="novidades">
+									<input type="checkbox" id="novidades" value="sim">
+									Quero receber novidades da loja
+								</label>
+							</div>
+						</form>		
+					</fieldset>
 				</div>
 			</div>
 		</div>
